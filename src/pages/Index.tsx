@@ -41,7 +41,7 @@ const Index = () => {
                 </p>
 
                 <p className="leading-relaxed">
-                  "И знаешь, у меня в голове что-то щелкнуло и возникла мысль: <span className="text-primary font-semibold">'Я ведь могу лучше, гораздо лучше. И мне будет достаточно и 5 минут, чтобы убедить, что я гораздо сильнее БОЛЬШИНСТВА.'</span>"
+                  "И знаешь, у меня в голове что-то щелкнуло и возникла мысль: <span className="text-primary font-semibold">'Я ведь могу лучше, гораздо лучше. И мне будет достаточно и 5 минут, чтобы убедить, что я гораздо сильнее <span className="text-[hsl(var(--green-accent))]">БОЛЬШИНСТВА</span>.'</span>"
                 </p>
 
                 <p className="text-xl">
@@ -226,13 +226,13 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-background">
+      <section className="py-20 px-6 bg-gradient-to-br from-secondary/40 to-background">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-black mb-4">
               Сейчас для меня
             </h2>
-            <h3 className="text-5xl md:text-6xl font-black text-primary">
+            <h3 className="text-5xl md:text-6xl font-black text-primary mb-4">
               Маркетинг = Деньги
             </h3>
             <p className="text-xl text-muted-foreground mt-4">
@@ -241,36 +241,60 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-card p-8 rounded-2xl border border-border">
-              <h4 className="text-2xl font-bold mb-3">Продукт {'>'} Креатив</h4>
-              <p className="text-muted-foreground">Сначала продукт и ЦА → потом креатив, а не наоборот.</p>
+            <div className="relative overflow-hidden bg-gradient-to-br from-card to-card/80 p-8 rounded-3xl border border-border shadow-lg hover:shadow-xl transition-shadow">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16"></div>
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
+                    <Icon name="Package" className="text-primary" size={20} />
+                  </div>
+                  <h4 className="text-2xl font-bold">Продукт {'>'} Креатив</h4>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">Сначала продукт и ЦА → потом креатив, а не наоборот.</p>
+              </div>
             </div>
 
-            <div className="bg-card p-8 rounded-2xl border border-border">
-              <h4 className="text-2xl font-bold mb-3">Цифры {'>'} Ощущения</h4>
-              <p className="text-muted-foreground">Гипотеза → тест → замер → решение (масштабировать или убить).</p>
+            <div className="relative overflow-hidden bg-gradient-to-br from-card to-card/80 p-8 rounded-3xl border border-border shadow-lg hover:shadow-xl transition-shadow">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16"></div>
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
+                    <Icon name="BarChart3" className="text-primary" size={20} />
+                  </div>
+                  <h4 className="text-2xl font-bold">Цифры {'>'} Ощущения</h4>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">Гипотеза → тест → замер → решение (масштабировать или убить).</p>
+              </div>
             </div>
           </div>
 
-          <div className="bg-card p-10 rounded-2xl border border-border mb-8">
-            <h4 className="text-2xl font-bold mb-6">Бизнес в контексте</h4>
-            <p className="text-muted-foreground mb-6">
-              Я понимаю, что маркетинг не живёт в вакууме. Я знаю, что такое:
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
-              {['ФОТ', 'Юнит-экономика', 'Окупаемость', 'ROI', 'LTV'].map((term) => (
-                <Badge key={term} variant="secondary" className="text-center py-2">
-                  {term}
-                </Badge>
-              ))}
+          <div className="relative overflow-hidden bg-gradient-to-br from-foreground to-foreground/90 p-10 rounded-3xl mb-8 shadow-2xl">
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full -ml-32 -mb-32"></div>
+            <div className="relative">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 bg-background/10 rounded-xl flex items-center justify-center">
+                  <Icon name="TrendingUp" className="text-background" size={24} />
+                </div>
+                <h4 className="text-3xl font-bold text-background">Бизнес в контексте</h4>
+              </div>
+              <p className="text-background/70 mb-8 text-lg">
+                Я понимаю, что маркетинг не живёт в вакууме. Я знаю, что такое:
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                {['ФОТ', 'Юнит-экономика', 'Окупаемость', 'ROI', 'LTV'].map((term) => (
+                  <div key={term} className="bg-background/10 backdrop-blur-sm border border-background/20 rounded-xl py-3 px-4 text-center text-background font-semibold hover:bg-background/20 transition-colors">
+                    {term}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
           <div className="flex flex-wrap gap-3 justify-center">
             {['Быстро собираю лендинги', 'Быстро тестирую', 'Сегментирую ЦА', 'Сильный смысловик'].map((skill) => (
-              <Badge key={skill} className="bg-primary/10 text-primary border-primary/20 py-2 px-4">
+              <div key={skill} className="bg-primary/10 border border-primary/20 rounded-2xl py-3 px-6 text-primary font-semibold hover:bg-primary/20 transition-colors">
                 {skill}
-              </Badge>
+              </div>
             ))}
           </div>
         </div>
@@ -395,7 +419,7 @@ const Index = () => {
             </div>
 
             <div className="bg-[hsl(var(--green-accent))]/10 border-2 border-[hsl(var(--green-accent))]/30 p-8 rounded-2xl">
-              <h3 className="text-2xl font-black mb-4 text-[hsl(var(--green-accent))]">Жми кнопку, если хочешь:</h3>
+              <h3 className="text-2xl font-black mb-4 text-[hsl(var(--green-accent))]">Жми кнопку ниже, если хочешь:</h3>
               <ul className="text-left space-y-3 text-foreground">
                 <li className="flex items-start gap-3">
                   <Icon name="Check" className="text-[hsl(var(--green-accent))] mt-1 flex-shrink-0" size={20} />
