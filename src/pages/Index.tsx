@@ -440,7 +440,7 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="py-8 px-6 bg-foreground text-background/50 text-center text-sm">
+      <footer className="py-8 px-6 text-background/50 text-center text-sm bg-gray-800">
         <p>Сделано без шаблонов, честно и с душой</p>
       </footer>
     </div>
