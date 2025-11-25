@@ -82,7 +82,7 @@ const Index = () => {
                         <h3 className="font-bold">CV Profile</h3>
                         <Icon name="Star" size={20} className="text-primary" />
                       </div>
-                      <p className="text-sm text-muted-foreground">EDITION 2024</p>
+                      <p className="text-sm text-muted-foreground">EDITION 2025.11</p>
                     </div>
                   </div>
 
