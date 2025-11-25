@@ -275,7 +275,7 @@ const Index = () => {
                 <div className="w-12 h-12 bg-background/10 rounded-xl flex items-center justify-center">
                   <Icon name="TrendingUp" className="text-background" size={24} />
                 </div>
-                <h4 className="text-3xl font-bold text-background">Бизнес в контексте</h4>
+                <h4 className="text-3xl font-bold text-background">Я в контексте Бизнеса</h4>
               </div>
               <p className="text-background/70 mb-8 text-lg">
                 Я понимаю, что маркетинг не живёт в вакууме. Я знаю, что такое:
