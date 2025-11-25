@@ -17,38 +17,83 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <section className="min-h-screen flex items-center justify-center px-6 py-20">
-        <div className="max-w-4xl w-full">
-          <Badge variant="outline" className="mb-8 border-primary text-primary px-4 py-1.5 text-sm">
-            <span className="inline-block w-2 h-2 rounded-full bg-primary mr-2"></span>
-            ATTENTION: HR & RECRUITERS
-          </Badge>
-          
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight">
-            Привет!<br />
-            Вот ты и{' '}
-            <span className="text-primary">попала.</span>
-          </h1>
+        <div className="max-w-7xl w-full">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <Badge variant="outline" className="mb-8 border-primary text-primary px-4 py-1.5 text-sm">
+                <span className="inline-block w-2 h-2 rounded-full bg-primary mr-2"></span>
+                ATTENTION: HR & RECRUITERS
+              </Badge>
+              
+              <h1 className="text-6xl md:text-7xl font-black mb-6 leading-tight">
+                Привет!<br />
+                Вот ты и{' '}
+                <span className="text-primary">попала на лэндос</span>
+              </h1>
 
-          <div className="space-y-8 text-lg text-muted-foreground mt-12">
-            <div className="border-l-4 border-foreground pl-6">
-              <p className="text-foreground font-semibold text-xl mb-2">
-                "А зачем я сюда перешла?"
-              </p>
-              <p className="leading-relaxed">
-                Объясняю) Прежде чем откликнуться на вакансию, я просмотрел тонны резюме моих коллег. И знаешь, это все настолько банально, однотипно...
-              </p>
+              <div className="space-y-8 text-lg text-muted-foreground mt-12">
+                <p className="text-foreground font-semibold text-xl">
+                  Уверен, возник вопрос: "А зачем я сюда перешла?"
+                </p>
+                
+                <p className="leading-relaxed">
+                  Объясняю) Прежде чем откликнуться на вакансию, я просмотрел тонны резюме моих коллег. И знаешь, это все настолько банально, однотипно...
+                </p>
+
+                <p className="leading-relaxed">
+                  "И знаешь, у меня в голове что-то щелкнуло и возникла мысль: <span className="text-primary font-semibold">'Я ведь могу лучше, гораздо лучше. И мне будет достаточно и 5 минут, чтобы убедить, что я гораздо сильнее БОЛЬШИНСТВА.'</span>"
+                </p>
+
+                <p className="text-xl">
+                  Не веришь?))) Ну, и правильно делаешь:D Но давай все же проверим,{' '}
+                  <span className="text-muted-foreground/60 uppercase tracking-wider text-sm">листай вниз!</span>
+                </p>
+              </div>
             </div>
 
-            <div className="border-l-4 border-foreground pl-6">
-              <p className="leading-relaxed">
-                "И знаешь, у меня в голове что-то щелкнуло: <span className="text-primary font-semibold">«Я ведь могу лучше»</span>. И мне будет достаточно <span className="underline decoration-2 decoration-foreground">5 минут</span>, чтобы убедить тебя."
-              </p>
-            </div>
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl"></div>
+                <div className="relative bg-gradient-to-br from-card to-card/50 border-2 border-border rounded-3xl p-8 w-80 shadow-2xl">
+                  <Badge variant="outline" className="mb-6 border-primary text-primary">
+                    NOT AVERAGE
+                  </Badge>
+                  
+                  <div className="flex justify-center mb-6">
+                    <div className="relative">
+                      <div className="w-32 h-32 rounded-full border-4 border-border bg-secondary flex items-center justify-center">
+                        <Icon name="User" size={64} className="text-muted-foreground" />
+                      </div>
+                      <div className="absolute -bottom-2 -right-2 bg-primary rounded-full p-2">
+                        <Icon name="Heart" size={20} className="text-white" />
+                      </div>
+                    </div>
+                  </div>
 
-            <p className="text-xl">
-              Не веришь?))) Ну, и правильно делаешь:D Но давай все же проверим,{' '}
-              <span className="text-muted-foreground/60 uppercase tracking-wider text-sm">листай вниз!</span>
-            </p>
+                  <div className="text-center mb-6">
+                    <div className="bg-foreground text-background px-6 py-2 rounded-full inline-block font-bold">
+                      MARKETING PRO
+                    </div>
+                  </div>
+
+                  <div className="space-y-3">
+                    <div className="bg-secondary/50 rounded-2xl p-4 border border-border">
+                      <div className="flex items-center justify-between mb-2">
+                        <h3 className="font-bold">CV Profile</h3>
+                        <Icon name="Star" size={20} className="text-primary" />
+                      </div>
+                      <p className="text-sm text-muted-foreground">EDITION 2024</p>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 flex gap-2">
+                    <div className="h-2 flex-1 bg-primary rounded-full animate-pulse"></div>
+                    <div className="h-2 flex-1 bg-primary/50 rounded-full animate-pulse delay-100"></div>
+                    <div className="h-2 flex-1 bg-primary/30 rounded-full animate-pulse delay-200"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -61,11 +106,8 @@ const Index = () => {
             </Badge>
           </div>
           
-          <h2 className="text-5xl md:text-6xl font-black text-center mb-4">
-            Дай я попробую угадать
-          </h2>
           <h2 className="text-5xl md:text-6xl font-black text-center mb-16">
-            <span className="text-primary">твой день</span>
+            Дай я попробую угадать <span className="text-primary">твой день!</span>
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -78,7 +120,7 @@ const Index = () => {
               </Badge>
               <h3 className="text-2xl font-black mb-4">Алмаз, который слился</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Вроде все супер, договорились, а он... просто слился и даже не написал (плаки-плаки).
+                Вот ты сидишь, разбираешь резюмехи и видишь, вот он, твой алмазик, по имен Иван Иваныч. Звонишь ему и вроде бы все замечательно, договорились о встрече, а он... просто, СУКА,слился и даже не написал (плаки-плаки). Грусто
               </p>
             </div>
 
@@ -91,7 +133,7 @@ const Index = () => {
               </Badge>
               <h3 className="text-2xl font-black mb-4">Илон Маск из Скиллбокса</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Резюме — космос, второй Джобс. По факту? 4 месяца курсов и ноль практики.
+                Или например. Приходит какой-то ВАся, читаешь резюме, а там чисто второй Илон Маск, чуть ли не Кока-Колу в одного запустил и Стив Джобс к нему ходил за советом. А что по факту? 4 месяца яндекс практикума или какой-нибудь скиллбокс) Было же, такое да?)
               </p>
             </div>
 
@@ -104,7 +146,7 @@ const Index = () => {
               </Badge>
               <h3 className="text-2xl font-black mb-4">Агент 007 (NDA)</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Все под NDA. Здравый смысл тоже под NDA. Результатов не покажем, но поверь на слово.
+                А вот еще персонажи, у которых все под NDA. Как бы, ну, ок... Ну, наверное, там здравый смысл тоже под NDA
               </p>
             </div>
           </div>
@@ -115,10 +157,10 @@ const Index = () => {
             </Badge>
             <h3 className="text-4xl font-black mb-6">Печалька, да?</h3>
             <p className="text-xl mb-2">
-              Давай объективно — сейчас на рынке просто цирк. И угадай, кто крайняя?
+              Давай объективно — сейчас на рынке просто цирк.
             </p>
-            <p className="text-4xl font-black text-primary mt-4">
-              ТЫ
+            <p className="text-xl mb-2">
+              И угадай, кто крайняя? <span className="text-4xl font-black text-primary">ТЫ</span>. И я это прекрасно понимаю.
             </p>
           </div>
         </div>
@@ -136,11 +178,10 @@ const Index = () => {
               </h2>
               <div className="w-16 h-1 bg-primary mb-8"></div>
               <p className="text-xl text-background/80 leading-relaxed mb-8">
-                Стараюсь быть честным.<br />
-                HR — не «секретарь», ты мой партнёр.
+                Стараюсь быть честным, именно поэтому:
               </p>
-              <div className="border-l-4 border-background/20 pl-6 text-background/60 italic">
-                P.S. Я точно не идеальный. Я просто стараюсь быть честным с людьми и с собой.
+              <div className="border-l-4 border-background/20 pl-6 text-background/60 italic mt-8">
+                P.S. Я точно не идеальный. Я просто стараюсь быть честным с людьми и с собой, вот и все.
               </div>
             </div>
 
@@ -149,22 +190,27 @@ const Index = () => {
                 {
                   number: '01',
                   title: 'Не вру про опыт',
-                  desc: 'Никаких выдуманных «Head of Вселенная» в микроконторе.'
+                  desc: 'Никаких выдуманных «Coca-Cola» и должностей «Head of Вселенная» в микроконторе.'
                 },
                 {
                   number: '02',
                   title: 'Не пропадаю',
-                  desc: 'Договорились на созвон — я буду. Не могу — предупрежу.'
+                  desc: 'Договорились на созвон — я буду. Не могу — заранее предупрежу, а не исчезну в туман.'
                 },
                 {
                   number: '03',
                   title: 'Не устраиваю драму',
-                  desc: 'Не превращаю интервью в психотерапию.'
+                  desc: 'Не превращаю интервью в психотерапию и не поливаю грязью бывших.'
                 },
                 {
                   number: '04',
                   title: 'Не играю в гения',
-                  desc: 'Если не знаю — так и скажу. Но разберусь.'
+                  desc: 'Если не знаю — так и скажу. Но разберусь и вернусь с ответом.'
+                },
+                {
+                  number: '05',
+                  title: 'HR — не «секретарь»',
+                  desc: 'Ты мой партнёр. Мне важно, чтобы тебе со мной было удобно.'
                 }
               ].map((item) => (
                 <div key={item.number} className="flex gap-6">
@@ -206,25 +252,26 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="bg-card p-10 rounded-2xl border border-border">
+          <div className="bg-card p-10 rounded-2xl border border-border mb-8">
             <h4 className="text-2xl font-bold mb-6">Бизнес в контексте</h4>
             <p className="text-muted-foreground mb-6">
               Я понимаю, что маркетинг не живёт в вакууме. Я знаю, что такое:
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
               {['ФОТ', 'Юнит-экономика', 'Окупаемость', 'ROI', 'LTV'].map((term) => (
                 <Badge key={term} variant="secondary" className="text-center py-2">
                   {term}
                 </Badge>
               ))}
             </div>
-            <div className="flex flex-wrap gap-3">
-              {['Быстро собираю лендинги', 'Быстро тестирую', 'Сегментирую ЦА', 'Сильный смысловик'].map((skill) => (
-                <Badge key={skill} className="bg-primary/10 text-primary border-primary/20">
-                  {skill}
-                </Badge>
-              ))}
-            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-3 justify-center">
+            {['Быстро собираю лендинги', 'Быстро тестирую', 'Сегментирую ЦА', 'Сильный смысловик'].map((skill) => (
+              <Badge key={skill} className="bg-primary/10 text-primary border-primary/20 py-2 px-4">
+                {skill}
+              </Badge>
+            ))}
           </div>
         </div>
       </section>
@@ -240,8 +287,11 @@ const Index = () => {
             «Свой / Чужой»
           </h2>
 
-          <p className="text-xl text-background/70 mb-12">
-            А мы вообще сработаемся? Запусти диагностику совместимости перед тем, как писать.
+          <p className="text-xl text-background/70 mb-4">
+            А мы вообще сработаемся?
+          </p>
+          <p className="text-lg text-background/60 mb-12">
+            Нажми кнопку ниже, чтобы запустить диагностику совместимости.
           </p>
 
           {!scanStarted && (
@@ -257,7 +307,7 @@ const Index = () => {
           {scanStarted && !scanComplete && (
             <div className="bg-background/5 border border-background/20 rounded-2xl p-12 text-center">
               <div className="animate-pulse">
-                <p className="text-2xl font-bold mb-4">Тест на адекватность...</p>
+                <p className="text-2xl font-bold mb-4">Тест на адекватность... Пройдено</p>
                 <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto"></div>
               </div>
             </div>
@@ -265,35 +315,47 @@ const Index = () => {
 
           {scanComplete && (
             <div className="space-y-8">
-              <div className="bg-background/5 border border-hsl(var(--green-accent)) rounded-2xl p-8">
+              <div className="bg-background/5 border-2 border-[hsl(var(--green-accent))] rounded-2xl p-8">
                 <div className="flex items-center gap-4 mb-4">
                   <Icon name="CheckCircle" className="text-[hsl(var(--green-accent))]" size={32} />
                   <div>
-                    <h3 className="text-2xl font-black text-[hsl(var(--green-accent))]">MATCH CONFIRMED</h3>
+                    <h3 className="text-2xl font-black text-[hsl(var(--green-accent))]">СОВПАДЕНИЕ ПОДТВЕРЖДЕНО</h3>
                     <p className="text-sm text-background/50">ID: #8392-AX</p>
                   </div>
                 </div>
               </div>
 
               <div className="bg-background/5 border border-background/20 rounded-2xl p-8">
-                <div className="flex items-start gap-4 mb-4">
+                <div className="flex items-start gap-4">
                   <Icon name="Activity" className="text-[hsl(var(--green-accent))]" size={24} />
                   <div>
-                    <h4 className="text-xl font-bold text-[hsl(var(--green-accent))] mb-2">ПИНГ: 0MS</h4>
+                    <h4 className="text-xl font-bold text-[hsl(var(--green-accent))] mb-2">Пинг: 0ms</h4>
                     <p className="text-background/70">
-                      Включаюсь и делаю. Не имитирую деятельность.
+                      Режим «Вечный думатель» отключен. Если договорились — я включаюсь и делаю, а не имитирую бурную деятельность.
                     </p>
                   </div>
                 </div>
               </div>
 
               <div className="bg-background/5 border border-background/20 rounded-2xl p-8">
-                <div className="flex items-start gap-4 mb-4">
+                <div className="flex items-start gap-4">
                   <Icon name="Terminal" className="text-[hsl(var(--green-accent))]" size={24} />
                   <div>
-                    <h4 className="text-xl font-bold text-[hsl(var(--green-accent))] mb-2">TOXIC: 0%</h4>
+                    <h4 className="text-xl font-bold text-[hsl(var(--green-accent))] mb-2">Toxic Level: 0%</h4>
                     <p className="text-background/70">
-                      Не душню. Краснеть перед стейкхолдерами не придется.
+                      Не душню, не ною, не самоутверждаюсь. Со мной можно спокойно идти к стейкхолдерам — краснеть не придется.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-background/5 border border-background/20 rounded-2xl p-8">
+                <div className="flex items-start gap-4">
+                  <Icon name="Lightbulb" className="text-[hsl(var(--green-accent))]" size={24} />
+                  <div>
+                    <h4 className="text-xl font-bold text-[hsl(var(--green-accent))] mb-2">Протокол «Ясность»</h4>
+                    <p className="text-background/70">
+                      Я не заставляю гуглить мои термины. Внятно рассказываю о проектах, без «эээ» и «ну типа».
                     </p>
                   </div>
                 </div>
@@ -311,19 +373,19 @@ const Index = () => {
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-destructive/10 border-2 border-destructive/30 p-8 rounded-2xl">
-              <h3 className="text-2xl font-black mb-4 text-destructive">Тебе НЕ сюда, если нужен:</h3>
+            <div className="bg-muted/40 border-2 border-muted p-8 rounded-2xl">
+              <h3 className="text-2xl font-black mb-4 text-foreground">Тебе НЕ сюда, если нужен:</h3>
               <ul className="text-left space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-3">
-                  <Icon name="X" className="text-destructive mt-1" size={20} />
+                  <Icon name="X" className="text-muted-foreground mt-1 flex-shrink-0" size={20} />
                   <span>«Звёздный» маркетолог с раздутым ЧСВ</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Icon name="X" className="text-destructive mt-1" size={20} />
+                  <Icon name="X" className="text-muted-foreground mt-1 flex-shrink-0" size={20} />
                   <span>Платиновый сказочник, который красиво врёт</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Icon name="X" className="text-destructive mt-1" size={20} />
+                  <Icon name="X" className="text-muted-foreground mt-1 flex-shrink-0" size={20} />
                   <span>Имитатор бурной деятельности</span>
                 </li>
               </ul>
@@ -332,19 +394,19 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="bg-primary/10 border-2 border-primary/30 p-8 rounded-2xl">
-              <h3 className="text-2xl font-black mb-4 text-primary">Жми кнопку, если хочешь:</h3>
-              <ul className="text-left space-y-3 text-muted-foreground">
+            <div className="bg-[hsl(var(--green-accent))]/10 border-2 border-[hsl(var(--green-accent))]/30 p-8 rounded-2xl">
+              <h3 className="text-2xl font-black mb-4 text-[hsl(var(--green-accent))]">Жми кнопку, если хочешь:</h3>
+              <ul className="text-left space-y-3 text-foreground">
                 <li className="flex items-start gap-3">
-                  <Icon name="Check" className="text-primary mt-1" size={20} />
+                  <Icon name="Check" className="text-[hsl(var(--green-accent))] mt-1 flex-shrink-0" size={20} />
                   <span>Живого адекватного маркетолога</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Icon name="Check" className="text-primary mt-1" size={20} />
+                  <Icon name="Check" className="text-[hsl(var(--green-accent))] mt-1 flex-shrink-0" size={20} />
                   <span>Того, кто уважает твой календарь</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Icon name="Check" className="text-primary mt-1" size={20} />
+                  <Icon name="Check" className="text-[hsl(var(--green-accent))] mt-1 flex-shrink-0" size={20} />
                   <span>Того, кто нормально говорит и работает</span>
                 </li>
               </ul>
@@ -353,25 +415,27 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-primary text-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-5xl md:text-6xl font-black mb-12">Связаться</h2>
+      <section className="py-20 px-6 bg-foreground">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-5xl md:text-6xl font-black mb-12 text-background text-center">Связаться</h2>
           
-          <div className="space-y-6">
-            <Button 
-              asChild
-              size="lg"
-              className="bg-white text-primary hover:bg-white/90 px-12 py-6 text-xl font-bold w-full md:w-auto"
-            >
-              <a href="https://t.me/N_Rybakov" target="_blank" rel="noopener noreferrer">
-                <Icon name="Send" className="mr-3" size={24} />
-                Написать в Telegram
-              </a>
-            </Button>
+          <div className="bg-background rounded-3xl p-12 shadow-2xl">
+            <div className="text-center space-y-6">
+              <Button 
+                asChild
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl font-bold w-full md:w-auto"
+              >
+                <a href="https://t.me/N_Rybakov" target="_blank" rel="noopener noreferrer">
+                  <Icon name="Send" className="mr-3" size={24} />
+                  Написать в Telegram
+                </a>
+              </Button>
 
-            <p className="text-white/80 text-sm">
-              P.S. +7 927 666 48 30 - это мой номер, если не отвечу в TG, пишите сюда, но не нужно звонить, пж 🙏
-            </p>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                P.S. +7 927 666 48 30 - это мой номер, если не отвечу в TG, пишите сюда, но не нужно звонить, пж 🙏
+              </p>
+            </div>
           </div>
         </div>
       </section>
