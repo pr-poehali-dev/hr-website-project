@@ -8,6 +8,11 @@ const Index = () => {
   const [scanComplete, setScanComplete] = useState(false);
 
   const handleScan = () => {
+    // Отправляем цель в Яндекс.Метрику
+    if (typeof window !== 'undefined' && (window as any).ym) {
+      (window as any).ym(105513639, 'reachGoal', 'scan-button');
+    }
+    
     setScanStarted(true);
     setTimeout(() => {
       setScanComplete(true);
@@ -321,7 +326,6 @@ const Index = () => {
               onClick={handleScan}
               size="lg"
               className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl font-bold"
-              data-metrika-goal="scan-button"
             >
               SCAN
             </Button>
@@ -449,7 +453,16 @@ const Index = () => {
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl font-bold w-full md:w-auto"
               >
-                <a href="https://t.me/N_Rybakov" target="_blank" rel="noopener noreferrer" data-metrika-goal="telegram-button">
+                <a 
+                  href="https://t.me/N_Rybakov" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    if (typeof window !== 'undefined' && (window as any).ym) {
+                      (window as any).ym(105513639, 'reachGoal', 'telegram-button');
+                    }
+                  }}
+                >
                   <Icon name="Send" className="mr-3" size={24} />
                   Написать в Telegram
                 </a>
