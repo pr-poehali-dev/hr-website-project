@@ -317,18 +317,24 @@ const Index = () => {
           <p className="text-xl text-background/70 mb-4">
             А мы вообще сработаемся?
           </p>
-          <p className="text-lg text-background/60 mb-12">
+          <p className="text-lg text-red-500 mb-12 font-bold uppercase">
             Нажми кнопку ниже, чтобы запустить диагностику совместимости.
           </p>
 
           {!scanStarted && (
-            <Button 
-              onClick={handleScan}
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-white px-12 py-6 text-xl font-bold"
-            >
-              SCAN
-            </Button>
+            <div className="flex items-center gap-6">
+              <Button 
+                onClick={handleScan}
+                size="lg"
+                className="bg-red-600 hover:bg-red-700 text-white px-16 py-8 text-2xl font-bold animate-pulse shadow-2xl"
+              >
+                SCAN
+              </Button>
+              <div className="flex items-center gap-3 animate-bounce">
+                <Icon name="ArrowRight" size={40} className="text-red-500" />
+                <p className="text-xl text-red-500 font-bold">Жми, запусти диагностику!</p>
+              </div>
+            </div>
           )}
 
           {scanStarted && !scanComplete && (
