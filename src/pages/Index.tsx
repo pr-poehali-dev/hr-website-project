@@ -21,63 +21,92 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <section className="min-h-screen flex items-center justify-center px-6 py-20">
-        <div className="max-w-7xl w-full">
+      <section className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/10"></div>
+        <div className="absolute top-20 right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-secondary/20 rounded-full blur-3xl"></div>
+        
+        <div className="max-w-7xl w-full relative z-10">
           <div className="grid md:grid-cols-[1fr_1.2fr] gap-16 items-center">
-            <div>
-              <Badge variant="outline" className="mb-8 border-primary text-primary px-4 py-1.5 text-sm">
-                <span className="inline-block w-2 h-2 rounded-full bg-primary mr-2"></span>
-                ATTENTION: HR & RECRUITERS
-              </Badge>
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/30 rounded-full px-5 py-2.5">
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                </span>
+                <span className="text-sm font-bold text-primary">ATTENTION: HR & RECRUITERS</span>
+              </div>
               
-              <h1 className="text-4xl md:text-5xl font-black mb-8 leading-tight">
-                Привет! Спасибо, что кликнула.
-              </h1>
+              <div>
+                <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                  Привет! Спасибо, что кликнула.
+                </h1>
+                <div className="w-24 h-1.5 bg-gradient-to-r from-primary to-primary/40 rounded-full mb-8"></div>
+              </div>
 
-              <p className="text-xl md:text-2xl text-foreground leading-relaxed">
-                Я сделал эту страницу, чтобы сэкономить твое время и нервы.
-              </p>
+              <div className="space-y-6">
+                <p className="text-xl md:text-2xl text-foreground leading-relaxed font-medium">
+                  Я сделал эту страницу, чтобы сэкономить твое время и нервы.
+                </p>
+
+                <div className="bg-card/50 backdrop-blur-sm border-l-4 border-primary rounded-r-2xl p-6 shadow-lg">
+                  <p className="text-base text-muted-foreground leading-relaxed mb-3">
+                    Я недавно попробовал посмотреть на рынок глазами HR. Пролистал десятки резюме коллег... и мне стало тебя искренне жаль. Шаблонные фразы, вода, "успешный успех".
+                  </p>
+                  <p className="text-base text-foreground leading-relaxed font-medium mb-3">
+                    В этот момент я решил: <span className="text-primary">не хочу тратить твое время на очередное "стрессоустойчивый и коммуникабельный"</span>. Я сделал эту страницу, чтобы мы сэкономили друг другу время и нервы. Без пафоса.
+                  </p>
+                  <p className="text-lg font-bold text-foreground flex items-center gap-2">
+                    Листай вниз, давай сверим наши "боли". Уверен, тебе это знакомо. 
+                    <Icon name="ArrowDown" className="text-primary animate-bounce" size={24} />
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="flex justify-center">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl"></div>
-                <div className="relative bg-gradient-to-br from-card to-card/50 border-2 border-border rounded-3xl p-10 w-96 shadow-2xl">
-                  <Badge variant="outline" className="mb-6 border-primary text-primary">
-                    NOT AVERAGE
-                  </Badge>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-transparent rounded-3xl blur-3xl animate-pulse"></div>
+                <div className="relative bg-gradient-to-br from-card via-card to-card/80 border-2 border-primary/20 rounded-3xl p-10 w-96 shadow-2xl hover:shadow-primary/20 hover:scale-105 transition-all duration-300">
+                  <div className="absolute -top-3 -right-3">
+                    <div className="bg-primary text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center gap-1">
+                      <Icon name="Sparkles" size={14} />
+                      NOT AVERAGE
+                    </div>
+                  </div>
                   
-                  <div className="flex justify-center mb-6">
+                  <div className="flex justify-center mb-8">
                     <div className="relative">
-                      <div className="w-40 h-40 rounded-full border-4 border-border bg-secondary flex items-center justify-center overflow-hidden">
+                      <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl animate-pulse"></div>
+                      <div className="relative w-44 h-44 rounded-full border-4 border-primary/30 bg-gradient-to-br from-secondary to-card flex items-center justify-center overflow-hidden shadow-xl">
                         <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=400&fit=crop" alt="Cute cat" className="w-full h-full object-cover" />
                       </div>
-                      <div className="absolute -bottom-2 -right-2 bg-primary rounded-full p-2">
-                        <Icon name="Heart" size={20} className="text-white" />
+                      <div className="absolute -bottom-2 -right-2 bg-gradient-to-br from-primary to-primary/80 rounded-full p-3 shadow-lg">
+                        <Icon name="Heart" size={24} className="text-white" />
                       </div>
                     </div>
                   </div>
 
                   <div className="text-center mb-6">
-                    <div className="bg-foreground text-background px-6 py-2 rounded-full inline-block font-bold">
+                    <div className="bg-gradient-to-r from-foreground to-foreground/90 text-background px-8 py-3 rounded-full inline-block font-bold text-lg shadow-lg">
                       MARKETING PRO
                     </div>
                   </div>
 
-                  <div className="space-y-3">
-                    <div className="bg-secondary/50 rounded-2xl p-4 border border-border">
+                  <div className="space-y-4">
+                    <div className="bg-gradient-to-br from-secondary/50 to-secondary/30 rounded-2xl p-5 border border-primary/10 shadow-md hover:shadow-lg transition-shadow">
                       <div className="flex items-center justify-between mb-2">
-                        <h3 className="font-bold">CV Profile</h3>
+                        <h3 className="font-bold text-foreground">CV Profile</h3>
                         <Icon name="Star" size={20} className="text-primary" />
                       </div>
-                      <p className="text-sm text-muted-foreground">EDITION 2025.11</p>
+                      <p className="text-sm text-muted-foreground font-medium">EDITION 2025.11</p>
                     </div>
                   </div>
 
-                  <div className="mt-6 flex gap-2">
-                    <div className="h-2 flex-1 bg-primary rounded-full animate-pulse"></div>
-                    <div className="h-2 flex-1 bg-primary/50 rounded-full animate-pulse delay-100"></div>
-                    <div className="h-2 flex-1 bg-primary/30 rounded-full animate-pulse delay-200"></div>
+                  <div className="mt-8 flex gap-2">
+                    <div className="h-2.5 flex-1 bg-gradient-to-r from-primary to-primary/80 rounded-full animate-pulse shadow-sm"></div>
+                    <div className="h-2.5 flex-1 bg-gradient-to-r from-primary/60 to-primary/40 rounded-full animate-pulse delay-100 shadow-sm"></div>
+                    <div className="h-2.5 flex-1 bg-gradient-to-r from-primary/40 to-primary/20 rounded-full animate-pulse delay-200 shadow-sm"></div>
                   </div>
                 </div>
               </div>
