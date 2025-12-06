@@ -30,10 +30,8 @@ const Index = () => {
                 ATTENTION: HR & RECRUITERS
               </Badge>
               
-              <h1 className="text-6xl md:text-7xl font-black mb-6 leading-tight">
-                Привет! :-)<br />
-                Рад, что ты{' '}
-                <span className="text-primary">нажала на ссылку</span>
+              <h1 className="text-5xl md:text-6xl font-black mb-6 leading-snug">
+                Привет! Рад, что ты нажала на ссылку
               </h1>
 
               <div className="space-y-8 text-lg text-muted-foreground mt-12">
