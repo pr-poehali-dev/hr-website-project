@@ -23,49 +23,34 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <section className="min-h-screen flex items-center justify-center px-6 py-20">
         <div className="max-w-7xl w-full">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-[1fr_1.2fr] gap-16 items-center">
             <div>
               <Badge variant="outline" className="mb-8 border-primary text-primary px-4 py-1.5 text-sm">
                 <span className="inline-block w-2 h-2 rounded-full bg-primary mr-2"></span>
                 ATTENTION: HR & RECRUITERS
               </Badge>
               
-              <h1 className="text-5xl md:text-6xl font-black mb-6 leading-snug">
-                Привет! Рад, что ты нажала на ссылку
+              <h1 className="text-4xl md:text-5xl font-black mb-8 leading-tight">
+                Привет! Спасибо, что кликнула.
               </h1>
 
-              <div className="space-y-8 text-lg text-muted-foreground mt-12">
-                <p className="leading-relaxed">
-                  Обычно здесь пишут: «Я лучший маркетолог, выбери меня!»<br />
-                  Но я решил зайти с другой стороны.
-                </p>
-                
-                <p className="leading-relaxed">
-                  Я недавно попробовал посмотреть на рынок глазами HR. Пролистал десятки резюме коллег... и мне стало тебя искренне жаль. Шаблонные фразы, вода, "успешный успех".
-                </p>
-
-                <p className="leading-relaxed">
-                  В этот момент я решил: <span className="text-primary font-semibold">не хочу тратить твое время на очередное "стрессоустойчивый и коммуникабельный"</span>. Я сделал эту страницу, чтобы мы сэкономили друг другу время и нервы. Без пафоса.
-                </p>
-
-                <p className="text-xl">
-                  Листай вниз, давай сверим наши "боли". Уверен, тебе это знакомо. 👇
-                </p>
-              </div>
+              <p className="text-xl md:text-2xl text-foreground leading-relaxed">
+                Я сделал эту страницу, чтобы сэкономить твое время и нервы.
+              </p>
             </div>
 
             <div className="flex justify-center">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent rounded-3xl blur-2xl"></div>
-                <div className="relative bg-gradient-to-br from-card to-card/50 border-2 border-border rounded-3xl p-8 w-80 shadow-2xl">
+                <div className="relative bg-gradient-to-br from-card to-card/50 border-2 border-border rounded-3xl p-10 w-96 shadow-2xl">
                   <Badge variant="outline" className="mb-6 border-primary text-primary">
                     NOT AVERAGE
                   </Badge>
                   
                   <div className="flex justify-center mb-6">
                     <div className="relative">
-                      <div className="w-32 h-32 rounded-full border-4 border-border bg-secondary flex items-center justify-center">
-                        <Icon name="User" size={64} className="text-muted-foreground" />
+                      <div className="w-40 h-40 rounded-full border-4 border-border bg-secondary flex items-center justify-center overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=400&fit=crop" alt="Cute cat" className="w-full h-full object-cover" />
                       </div>
                       <div className="absolute -bottom-2 -right-2 bg-primary rounded-full p-2">
                         <Icon name="Heart" size={20} className="text-white" />
@@ -101,54 +86,69 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-secondary/30">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-4">
-            <Badge variant="outline" className="border-muted-foreground/30 text-muted-foreground mb-8">
+      <section className="py-24 px-6 bg-gradient-to-b from-secondary/20 to-background">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <Badge variant="outline" className="border-primary/40 text-primary mb-6 px-4 py-1.5 text-sm font-bold">
               REALITY CHECK
             </Badge>
+            <h2 className="text-4xl md:text-5xl font-black mb-4">
+              Дай я попробую угадать <span className="text-primary">твой день!</span>
+            </h2>
           </div>
-          
-          <h2 className="text-5xl md:text-6xl font-black text-center mb-16">
-            Дай я попробую угадать <span className="text-primary">твой день!</span>
-          </h2>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-card p-8 rounded-2xl border border-border">
-              <div className="mb-6">
-                <Icon name="Ghost" className="text-primary" size={40} />
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="group relative bg-gradient-to-br from-card to-card/80 p-8 rounded-3xl border-2 border-border shadow-lg hover:shadow-2xl hover:border-primary/30 transition-all duration-300">
+              <div className="absolute top-4 right-4 text-6xl opacity-10 group-hover:opacity-20 transition-opacity">👻</div>
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Icon name="Ghost" className="text-primary" size={24} />
+                  </div>
+                  <Badge variant="outline" className="border-primary/30 text-primary font-bold">
+                    GHOSTING
+                  </Badge>
+                </div>
+                <h3 className="text-2xl font-black mb-4 text-foreground">Алмаз, который растворился</h3>
+                <p className="text-muted-foreground leading-relaxed mb-3">Вот ты сидишь, разбираешь отклики и видишь: вот он, твой алмазик, Иван Иванович. Звонишь, договорились о встрече, ты уже выдохнула... а он просто МОЛЧА слился. Даже смс не написал.</p>
+                <p className="text-sm text-primary/70 italic">(Знакомо, да?)</p>
               </div>
-              <Badge variant="outline" className="mb-4 text-xs border-muted-foreground/30 text-muted-foreground">
-                👻 GHOSTING
-              </Badge>
-              <h3 className="text-2xl font-black mb-4">Алмаз, который растворился</h3>
-              <p className="text-muted-foreground leading-relaxed">Вот ты сидишь, разбираешь отклики и видишь: вот он, твой алмазик, Иван Иванович. Звонишь, договорились о встрече, ты уже выдохнула... а он просто МОЛЧА слился. Даже смс не написал.<br /><span className="text-sm italic">(Знакомо, да?)</span></p>
             </div>
 
-            <div className="bg-card p-8 rounded-2xl border border-border">
-              <div className="mb-6">
-                <Icon name="Rocket" className="text-primary" size={40} />
+            <div className="group relative bg-gradient-to-br from-card to-card/80 p-8 rounded-3xl border-2 border-border shadow-lg hover:shadow-2xl hover:border-primary/30 transition-all duration-300">
+              <div className="absolute top-4 right-4 text-6xl opacity-10 group-hover:opacity-20 transition-opacity">🧠</div>
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Icon name="Rocket" className="text-primary" size={24} />
+                  </div>
+                  <Badge variant="outline" className="border-primary/30 text-primary font-bold">
+                    FAKE GURU
+                  </Badge>
+                </div>
+                <h3 className="text-2xl font-black mb-4 text-foreground">Илон Маск на минималках</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Или приходит такой «Вася». Читаешь резюме — там второй Стив Джобс, запускал ракеты в космос и Кока-Колу с колен поднимал. Начинаешь копать... а там 3 месяца курсов скиллбокса и опыт настройки рекламы для маминой подруги.
+                </p>
               </div>
-              <Badge variant="outline" className="mb-4 text-xs border-muted-foreground/30 text-muted-foreground">
-                🧠 FAKE GURU
-              </Badge>
-              <h3 className="text-2xl font-black mb-4">Илон Маск на минималках</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Или приходит такой «Вася». Читаешь резюме — там второй Стив Джобс, запускал ракеты в космос и Кока-Колу с колен поднимал. Начинаешь копать... а там 3 месяца курсов скиллбокса и опыт настройки рекламы для маминой подруги.
-              </p>
             </div>
 
-            <div className="bg-card p-8 rounded-2xl border border-border">
-              <div className="mb-6">
-                <Icon name="Shield" className="text-primary" size={40} />
+            <div className="group relative bg-gradient-to-br from-card to-card/80 p-8 rounded-3xl border-2 border-border shadow-lg hover:shadow-2xl hover:border-primary/30 transition-all duration-300">
+              <div className="absolute top-4 right-4 text-6xl opacity-10 group-hover:opacity-20 transition-opacity">🕵️</div>
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Icon name="Shield" className="text-primary" size={24} />
+                  </div>
+                  <Badge variant="outline" className="border-primary/30 text-primary font-bold">
+                    SECRET AGENT
+                  </Badge>
+                </div>
+                <h3 className="text-2xl font-black mb-4 text-foreground">Агент 007 (NDA)</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  А вот еще персонажи, у которых всё под NDA. Кейсов нет, цифр нет, названий нет. Такое чувство, что здравый смысл там тоже попал под NDA.
+                </p>
               </div>
-              <Badge variant="outline" className="mb-4 text-xs border-muted-foreground/30 text-muted-foreground">
-                🕵️‍♂️ SECRET AGENT
-              </Badge>
-              <h3 className="text-2xl font-black mb-4">Агент 007 (NDA)</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                А вот еще персонажи, у которых всё под NDA. Кейсов нет, цифр нет, названий нет. Такое чувство, что здравый смысл там тоже попал под NDA.
-              </p>
             </div>
           </div>
 
