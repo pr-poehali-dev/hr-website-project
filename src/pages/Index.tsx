@@ -504,9 +504,7 @@ const Index = () => {
                 </a>
               </Button>
 
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                P.S. +7 927 666 48 30 - это мой номер, если не отвечу в TG, пишите сюда, но не нужно звонить, пж 🙏
-              </p>
+              <p className="text-muted-foreground text-sm leading-relaxed"></p>
             </div>
           </div>
         </div>
